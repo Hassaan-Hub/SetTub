@@ -1,5 +1,23 @@
+.mainNav{
+    border-bottom: 1px solid #FFFFFF;
+    height: 62px;
+}
+
+
 .signup{
     background-color: #AE7AFF;
     height: 40px;
-    box-shadow: 4px 6px #38333F;
+    box-shadow: 2px 4px #38333F;
+}
+
+
+.inputDiv{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid #FFFFFF;
+    height: 40px;
+    width: 300px;
+    padding-left: 10px;
+    border-radius: 5px;
 }

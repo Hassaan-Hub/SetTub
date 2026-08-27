@@ -1,8 +1,7 @@
 import React from 'react'
 import Navbar from './component/navbar/Navbar'
-import Side from './component/Side'
-import Cards from './component/Cards'
-
+import Side from './component/SideFolder/Side'
+import CardsMain from './component/CardFolder/CardsMain'
 
 const App = () => {
   return (
@@ -10,7 +9,7 @@ const App = () => {
       <Navbar />
       <div className='flex h-[90%]'>
         <Side />
-        <Cards />
+        <CardsMain />
       </div>
     </div>
   )

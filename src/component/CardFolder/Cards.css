@@ -1,0 +1,61 @@
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+
+.singleCard{
+    width: 220px;
+    height: 209.093017578125px;
+}
+
+
+.singleCardDiv{
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    padding-right: 14px;
+    line-height: 18px;
+}
+
+.divTitle{
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.profile{
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+    object-fit: cover;
+}
+
+
+.singleCardDiv2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 220px;
+    height: 40px;
+    padding-left: 26px;
+}
+
+.divAuthor{
+    font-weight: 360;
+    font-size: 10px;
+    line-height: 18px;
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+
+.divViews{
+    font-weight: 360;
+    font-size: 10px;
+    line-height: 18px;
+    color: #FFFFFF;
+    padding-left: 10px;
+}
