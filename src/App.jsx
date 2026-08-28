@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './component/navbar/Navbar'
-import Side from './component/SideFolder/Side'
+import Sidebar from './component/Sidebar/Sidebar'
 import CardsMain from './component/CardFolder/CardsMain'
 
 const App = () => {
+  const [activeKey, setActiveKey] = useState('home')
+
   return (
-    <div className='h-screen w-full'>
+    <div className='h-screen w-full flex flex-col'>
       <Navbar />
-      <div className='flex h-[90%]'>
-        <Side />
+      <div className='flex flex-1 overflow-hidden'>
+        <Sidebar activeKey={activeKey} onSelect={setActiveKey} />
         <CardsMain />
       </div>
     </div>
