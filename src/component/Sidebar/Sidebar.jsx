@@ -25,8 +25,24 @@ const BOTTOM_ITEMS = [
   { key: 'settings', label: 'Settings', icon: <SettingOutlined /> },
 ]
 
-const SidebarItem = ({ item, activeKey, onSelect }) => {
-  const isActive = activeKey === item.key
+function SidebarItem(props) {
+  const item = props.item
+  const activeKey = props.activeKey
+  const onSelect = props.onSelect
+
+  let isActive = false
+  if (activeKey === item.key) {
+    isActive = true
+  }
+
+  let className = 'sidebar-item'
+  if (isActive) {
+    className = className + ' sidebar-item-active'
+  }
+
+  function handleClick() {
+    onSelect(item.key)
+  }
 
   return (
     <li>
@@ -34,8 +50,8 @@ const SidebarItem = ({ item, activeKey, onSelect }) => {
         type="button"
         title={item.label}
         aria-current={isActive ? 'page' : undefined}
-        className={`sidebar-item${isActive ? ' sidebar-item-active' : ''}`}
-        onClick={() => onSelect(item.key)}
+        className={className}
+        onClick={handleClick}
       >
         <span className="sidebar-item-icon" aria-hidden="true">
           {item.icon}
@@ -46,21 +62,38 @@ const SidebarItem = ({ item, activeKey, onSelect }) => {
   )
 }
 
-const Sidebar = ({ activeKey = '', onSelect = () => {} }) => {
+function Sidebar(props) {
+  const activeKey = props.activeKey || ''
+  const onSelect = props.onSelect || function () {}
+
   return (
     <aside className="sidebar">
       <nav className="sidebar-section" aria-label="Primary navigation">
         <ul className="sidebar-list">
-          {NAV_ITEMS.map((item) => (
-            <SidebarItem key={item.key} item={item} activeKey={activeKey} onSelect={onSelect} />
-          ))}
+          {NAV_ITEMS.map(function (item) {
+            return (
+              <SidebarItem 
+                key={item.key}
+                item={item}
+                activeKey={activeKey}
+                onSelect={onSelect}
+              />
+            )
+          })}
         </ul>
       </nav>
       <nav className="sidebar-section sidebar-section-bottom" aria-label="Account">
         <ul className="sidebar-list">
-          {BOTTOM_ITEMS.map((item) => (
-            <SidebarItem key={item.key} item={item} activeKey={activeKey} onSelect={onSelect} />
-          ))}
+          {BOTTOM_ITEMS.map(function (item) {
+            return (
+              <SidebarItem 
+                key={item.key}
+                item={item}
+                activeKey={activeKey}
+                onSelect={onSelect}
+              />
+            )
+          })}
         </ul>
       </nav>
     </aside>
