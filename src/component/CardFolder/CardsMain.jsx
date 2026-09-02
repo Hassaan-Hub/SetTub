@@ -3,7 +3,7 @@ import Cards from './Cards'
 
 const CardsMain = () => {
   return (
-    <div className='flex-1 w-full overflow-y-auto'>
+    <div className='cardMain flex-1 w-full'>
         <Cards />
     </div>
   )

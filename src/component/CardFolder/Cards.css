@@ -1,3 +1,12 @@
+.cardMain {
+  overflow-y: auto;
+}
+
+.cardMain::-webkit-scrollbar{
+    display: none;
+}
+
+
 .cards{
     display: flex;
     justify-content: center;
