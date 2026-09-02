@@ -1,0 +1,22 @@
+.srchMain{
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: 100%;
+    color: #FFFFFF;
+    gap: 20px;
+    padding: 15px;
+}
+
+.srchMain::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.srchprofile{
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+    object-fit: cover;
+}
