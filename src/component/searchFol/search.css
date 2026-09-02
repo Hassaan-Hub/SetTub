@@ -12,11 +12,36 @@
     display: none;
 }
 
+.srchTitDiv{
+    width: 476.5px;
+    padding: 0;
+    padding-left: 10px;
+}
 
+.srchTitle{
+    font-weight: 600;
+    font-style: Semi Bold;
+    font-size: 18px;
+    /* line-height: 35px; */
+    letter-spacing: 0%;
+}
+
+.srchPara{
+    padding-top: 15px;
+    font-weight: 400;
+    letter-spacing: 0%;
+    font-size: 14px;
+    line-height: 30px;
+}
 
 .srchprofile{
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border-radius: 200px;
     object-fit: cover;
+}
+
+
+.para{
+    font-size: 13px;
 }

@@ -23,13 +23,14 @@ const Search = ({ children }) => {
         return (
           <div className='flex' key={idx}>
             <img width={220} height={133.093017578125} src={val.thumbnail} alt="image" />
-            <div>
-              <p>{val.title}</p>
-              <p>{val.views} • {val.time}</p>
-              <div className='flex'>
+            <div className='srchTitDiv'>
+              <p className='srchTitle'>{val.title}</p>
+              <p className='srchPara'>{val.views} • {val.time}</p>
+              <div className='flex items-center gap-2'>
                 <img className='srchprofile' src={val.profile} alt="pr" />
                 <p>{val.author}</p>
               </div>
+              <p className='para'>Lorem ipsum dolor sit amet consectetur. Sagittis egestas justo adipiscing integer.</p>
             </div>
           </div>
         )
