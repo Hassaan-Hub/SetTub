@@ -27,7 +27,17 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Yash Mittal",
       thumbnail: thumbnail1,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nThis is the first part of our series on getting started with React. We cover the basics of components, state, props, and JSX, and set you up with a solid foundation to build your first app. This is going to be a long and detailed journey, so buckle up!",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!", avatarColor: "#3b82f6" },
+        { id: 2, name: "Lana Steiner", handle: "@lana", time: "2 mins ago", text: "This was really helpful, thank you so much for breaking it down step by step!", avatarColor: "#ec4899" },
+        { id: 3, name: "Olivia Rhye", handle: "@olivia", time: "5 mins ago", text: "Amazing explanation. Can't wait for part 2!", avatarColor: "#10b981" }
+      ]
     },
     {
       id: 2,
@@ -36,7 +46,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail2,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nThis is the second video in our series on content creation and YouTube growth.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 3,
@@ -45,7 +63,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail3,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nExploring the latest updates in Deno and its growing ecosystem.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 4,
@@ -54,7 +80,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail4,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nDeep dive into real-time communication with Socket.IO.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 5,
@@ -63,7 +97,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail5,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nLatest updates in infrastructure as code and design tools.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 6,
@@ -72,7 +114,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail6,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nA complete beginner's guide to React from zero.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 7,
@@ -81,7 +131,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail7,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nFirst look at Google's new cloud-based development environment.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 8,
@@ -90,7 +148,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail8,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nExploring exciting new developer tools and features.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 9,
@@ -99,7 +165,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail9,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nA deep case study of Flutter and Dart in production apps.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 10,
@@ -108,7 +182,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail10,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nUnderstanding database internals from an engineering perspective.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 11,
@@ -117,7 +199,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail11,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nLessons from building a developer product that scaled.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     },
     {
       id: 12,
@@ -126,7 +216,15 @@ const CardsDataContextProvider = ({ children }) => {
       time: "18 hours ago",
       author: "Anau Ros",
       thumbnail: thumbnail12,
-      profile: profile
+      profile: profile,
+      likes: 2,
+      dislikes: 9,
+      followerCount: "705K Subscribers",
+      followChannelName: "Lex Fridman",
+      description: "How to get started\n\nUnderstanding the internals of modern web browsers.",
+      comments: [
+        { id: 1, name: "Phoenix Baker", handle: "@phoenix", time: "Just now", text: "Looks good!" }
+      ]
     }
   ];
 

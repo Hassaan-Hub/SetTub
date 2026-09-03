@@ -29,6 +29,7 @@ function SidebarItem(props) {
   const item = props.item
   const activeKey = props.activeKey
   const onSelect = props.onSelect
+  const compact = props.compact
 
   let isActive = false
   if (activeKey === item.key) {
@@ -38,6 +39,14 @@ function SidebarItem(props) {
   let className = 'sidebar-item'
   if (isActive) {
     className = className + ' sidebar-item-active'
+  }
+
+  if (compact) {
+    className =
+      'flex items-center justify-center w-11 h-11 text-white border rounded-lg cursor-pointer ' +
+      (isActive
+        ? 'bg-white/10 border-[#ae7aff] shadow-[inset_3px_0_0_0_#ae7aff]'
+        : 'border-white/18 bg-transparent hover:bg-white/8')
   }
 
   function handleClick() {
@@ -56,7 +65,7 @@ function SidebarItem(props) {
         <span className="sidebar-item-icon" aria-hidden="true">
           {item.icon}
         </span>
-        <span className="sidebar-item-label">{item.label}</span>
+        {!compact && <span className="sidebar-item-label">{item.label}</span>}
       </button>
     </li>
   )
@@ -65,6 +74,44 @@ function SidebarItem(props) {
 function Sidebar(props) {
   const activeKey = props.activeKey || ''
   const onSelect = props.onSelect || function () {}
+  const compact = props.compact || false
+
+  if (compact) {
+    return (
+      <aside className="flex flex-col flex-shrink-0 w-16 h-full p-2 bg-[#0f0f0f] border-r border-white/12 overflow-y-auto">
+        <nav className="flex flex-col" aria-label="Primary navigation">
+          <ul className="flex flex-col gap-3 items-center list-none m-0 p-0">
+            {NAV_ITEMS.map(function (item) {
+              return (
+                <SidebarItem
+                  key={item.key}
+                  item={item}
+                  activeKey={activeKey}
+                  onSelect={onSelect}
+                  compact
+                />
+              )
+            })}
+          </ul>
+        </nav>
+        <nav className="flex flex-col mt-auto pt-4 border-t border-white/12" aria-label="Account">
+          <ul className="flex flex-col gap-3 items-center list-none m-0 p-0">
+            {BOTTOM_ITEMS.map(function (item) {
+              return (
+                <SidebarItem
+                  key={item.key}
+                  item={item}
+                  activeKey={activeKey}
+                  onSelect={onSelect}
+                  compact
+                />
+              )
+            })}
+          </ul>
+        </nav>
+      </aside>
+    )
+  }
 
   return (
     <aside className="sidebar">

@@ -1,12 +1,13 @@
 import { CardsDataContext } from '../../Context/CardsDataContextProvider';
 import React, { useContext } from 'react'
 import './search.css'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const Search = ({ children }) => {
 
   const videos = useContext(CardsDataContext);
+  const navigate = useNavigate();
 
   const location = useLocation();
 
@@ -21,7 +22,7 @@ const Search = ({ children }) => {
 
       {filteredVideos.map((val, idx) => {
         return (
-          <div className='flex' key={idx}>
+          <div className='flex cursor-pointer' key={idx} onClick={() => navigate(`/watch/${val.id}`)}>
             <img width={220} height={133.093017578125} src={val.thumbnail} alt="image" />
             <div className='srchTitDiv'>
               <p className='srchTitle'>{val.title}</p>

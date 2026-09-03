@@ -1,17 +1,19 @@
 import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Cards.css'
 import { CardsDataContext } from '../../Context/CardsDataContextProvider'
 
 const Cards = ({ children }) => {
 
     const videos = useContext(CardsDataContext)
+    const navigate = useNavigate()
 
 
 
     return (
         <div className='cards'>
             {videos.map((val, idx) => {
-                return <div className='singleCard' key={idx}>
+                return <div className='singleCard' key={idx} onClick={() => navigate(`/watch/${val.id}`)}>
                     <img width={220} height={133.093017578125} src={val.thumbnail} alt="image" />
                     <div className='singleCardDiv'>
                         <img className='profile' src={val.profile} alt="pr" />
