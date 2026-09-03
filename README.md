@@ -1,6 +1,6 @@
 # React + Vite
 
-👇netlify live link 
+netlify live link👉
 https://settub.netlify.app/
 
 
